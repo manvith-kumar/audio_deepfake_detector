@@ -1,0 +1,8 @@
+Flask==3.0.0
+numpy
+librosa
+soundfile
+torch
+pandas
+tqdm
+scikit-learn

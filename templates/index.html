@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio DeepFake Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Audio DeepFake Detection</h1>
+            <p>Upload an audio file (.wav, .mp3, .flac) to check if it's real or fake.</p>
+        </header>
+        <main>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="audio-file-input" name="audio_file" accept=".wav,.mp3,.flac" required>
+                <label for="audio-file-input" class="file-label">Choose Audio File</label>
+                <button type="submit" id="analyze-button">Analyze</button>
+            </form>
+            <div id="result-container" class="hidden">
+                <h2>Analysis Result</h2>
+                <div id="prediction"></div>
+                <div id="confidence"></div>
+            </div>
+            <div id="loading-spinner" class="hidden"></div>
+            <div id="error-message" class="hidden"></div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

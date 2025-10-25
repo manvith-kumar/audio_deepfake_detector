@@ -1,0 +1,12 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Data & Uploads
+data/
+uploads/
+checkpoints/
+
+# OS
+.DS_Store
