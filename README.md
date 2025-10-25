@@ -30,6 +30,7 @@ The repository is organized to separate the machine learning source code from th
 
 ```
 audio_deepfake_detector/
+├── checkpoints/              # Contains the trained model file
 ├── src/                     # Core ML source code for training, eval, etc.
 ├── model/                   # Python package for model inference in the web app
 ├── static/                  # CSS and JS files for the frontend
@@ -48,20 +49,16 @@ Follow these steps to get the application running on your local machine.
 
 ### \#\#\# 1. Prerequisites
 
-Make sure you have **Python 3.9+** and **Git** installed on your system. You will also need **Git LFS** (Large File Storage) to handle the model file.
-
-  - **Install Git LFS:** Download and install it from [**git-lfs.github.com**](https://git-lfs.github.com/). After installing, open your terminal and run `git lfs install` once to initialize it on your machine.
+Make sure you have **Python 3.9+** and **Git** installed on your system.
 
 ### \#\#\# 2. Clone the Repository
 
-Open your terminal and clone the repository. **Git LFS will automatically download the large `model_best.pth` file** during this process.
+Open your terminal and clone the repository. The trained model is included and will be downloaded automatically.
 
 ```bash
 git clone https://github.com/manvith-kumar/audio_deepfake_detector
 cd audio_deepfake_detector
 ```
-
-*(If you have already cloned the repository without Git LFS, run `git lfs pull` inside the folder to download the model file.)*
 
 ### \#\#\# 3. Set Up the Environment
 
@@ -85,7 +82,7 @@ pip install -r requirements.txt
 
 ### \#\#\# 5. Run the Application
 
-You are now ready to launch the web server\! The trained model is already included in the repository via Git LFS.
+You are now ready to launch the web server\!
 
 ```bash
 flask run
@@ -97,7 +94,7 @@ Once the server is running, open your web browser and navigate to **`http://127.
 
 ## \#\# (Optional) Training the Model from Scratch
 
-If you wish to train the model yourself, you can use the provided scripts.
+If you wish to train a new model yourself, you can use the provided scripts.
 
 ### \#\#\# 1. Generate and Preprocess Data
 
