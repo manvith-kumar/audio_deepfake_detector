@@ -1,12 +1,13 @@
-# Python
+# Python virtual environment
 venv/
+
+# Python cache files
 __pycache__/
 *.pyc
 
-# Data & Uploads
+# Generated data and user uploads
 data/
 uploads/
-checkpoints/
 
-# OS
+# OS-specific files
 .DS_Store
